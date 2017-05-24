@@ -1,0 +1,7 @@
+* Data Science Goodies for Emacs
+
+(Work in progress)
+
+Collection of my goodies to make Emacs a better environment for various data science workflows (R, Julia, Python).
+
+Example use shown in my own [spacemacs config](https://github.com/YiLiu6240/yxl-spacemacs).
