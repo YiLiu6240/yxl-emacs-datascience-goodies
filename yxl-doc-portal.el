@@ -20,7 +20,11 @@
   "Access to online documentations."
   (interactive)
   (ivy-read "Goto documentation:"
-            (sort yxl-dp-docs)
+            (sort yxl-dp-docs
+                  (lambda (elem1 elem2)
+                    (let ((str1 (car elem1))
+                          (str2 (car elem2)))
+                      (string-lessp str1 str2))))
             :action (lambda (x) (browse-url (cdr x)))
             :caller 'yxl-doc-portal))
 
