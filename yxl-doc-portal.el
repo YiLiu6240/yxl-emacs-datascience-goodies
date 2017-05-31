@@ -13,6 +13,8 @@
     ("Python - pandas" . "http://pandas.pydata.org/pandas-docs/stable/")
     ("Python - sklearn" . "http://scikit-learn.org/stable/user_guide.html")
     ("Python - matplotlib" . "https://matplotlib.org/contents.html")
+    ("Jupyter" . "https://jupyter.readthedocs.io/en/latest/")
+    ("Jupyter - notebook" . "https://jupyter-notebook.readthedocs.io/en/latest/")
     ("Julia - standard lib" . "https://docs.julialang.org/en/stable/")
     ("Julia - DataFrames" . "https://dataframesjl.readthedocs.io/en/latest/")))
 
