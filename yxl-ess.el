@@ -140,4 +140,14 @@ for more information!"
 
 (advice-add 'ess-rdired :override #'yxl-ess-rdired-popup)
 
+(defun yxl-ess-repl-popup ()
+  "Pop up the ess REPL associated with the current buffer."
+  (interactive)
+  (ess-force-buffer-current)
+  (let ((buff (process-buffer (get-process ess-current-process-name))))
+    (popwin:popup-buffer buff
+                         :width 0.4 :height 0.4
+                         :position 'bottom
+                         :stick t :noselect nil :dedicated t)))
+
 (provide 'yxl-ess)
