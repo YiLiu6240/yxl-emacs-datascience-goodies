@@ -16,7 +16,8 @@
     ("Jupyter" . "https://jupyter.readthedocs.io/en/latest/")
     ("Jupyter - notebook" . "https://jupyter-notebook.readthedocs.io/en/latest/")
     ("Julia - standard lib" . "https://docs.julialang.org/en/stable/")
-    ("Julia - DataFrames" . "https://dataframesjl.readthedocs.io/en/latest/")))
+    ("Julia - DataFrames" . "https://dataframesjl.readthedocs.io/en/latest/"))
+  "An alist of useful documentation websites / places")
 
 (defun yxl-doc-portal ()
   "Access to online documentations."
