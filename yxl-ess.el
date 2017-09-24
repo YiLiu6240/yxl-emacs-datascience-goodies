@@ -150,4 +150,20 @@ for more information!"
                          :position 'bottom
                          :stick t :noselect nil :dedicated t)))
 
+(defun yxl-ess-render ()
+  "Render current file using rmarkdown::render.
+Dependency: rmarkdown (obviously). By default export the output to a
+\"output\" directory."
+  ;; TODO: Add an option (or a prefix-arg) that renders the output to the
+  ;;       root directory.
+  ;; TODO: Allow argument specification (output format, ...) etc.
+  (interactive)
+  (let* ((file (file-name-nondirectory buffer-file-name))
+         (main-cmd "Rscript -e 'rmarkdown::render(\"%s\", %s)'")
+         (arg (concat "output_format = \"rmarkdown::html_document\","
+                      "output_dir = \"output\""))
+         (cmd (format main-cmd file arg)))
+    (message cmd)
+    (shell-command cmd)))
+
 (provide 'yxl-ess)
