@@ -29,9 +29,9 @@
                                        yxl-dash-search-history)))))
     (counsel-dash)))
 
-(defun yxl-dash-search-docset-external-browser ()
+(defun yxl-dash-search-docset-default-browser ()
   (interactive)
-  (let ((counsel-dash-browser-func 'browse-url-generic))
+  (let ((counsel-dash-browser-func 'browse-url))
     (yxl-dash-search-docset)))
 
 (provide 'yxl-dash)
