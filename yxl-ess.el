@@ -99,7 +99,8 @@
      ((string-equal system-type "darwin")
       (shell-command (format "open -a Rstudio %s & disown" path)))
      ((string-equal system-type "gnu/linux")
-      (shell-command (format "rstudio %s & disown" path))))))
+      (call-process-shell-command
+       "rstudio" nil 0 nil (format "%s" path))))))
 
 (defun yxl-ess-rdired-popup ()
   "Run dired-like mode on R objects.
