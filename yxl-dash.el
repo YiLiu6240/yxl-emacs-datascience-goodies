@@ -32,6 +32,7 @@
 (defun yxl-dash-search-docset-default-browser ()
   (interactive)
   (let ((counsel-dash-browser-func 'browse-url))
+    (counsel-dash-reset-connections)
     (yxl-dash-search-docset)))
 
 (provide 'yxl-dash)
